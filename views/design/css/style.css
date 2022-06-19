@@ -1,0 +1,121 @@
+body {
+    margin: 6px;
+    padding: 0;
+    height: 100%;
+}
+html{
+  height: 100%;
+}
+
+div {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer {
+    width: 100%;
+    font-size: 14px;
+    background-color: #004ec4;
+    color: white;
+    text-align: center;
+ }
+ 
+.header {
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.header > div:nth-child(1) {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: rgb(218, 240, 255);
+}
+
+.header > div:nth-child(2) > div:nth-child(1) {
+    border-top-right-radius: 12px;
+    background-color: rgb(184, 227, 255);
+}
+
+.header > div:nth-child(2) > div:nth-child(2) {
+    border-bottom-right-radius: 12px;
+    background-color: rgb(226, 211, 211);
+}
+
+.header .uyegiris {
+    background-color: rgb(206, 65, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+
+.header-ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-ul li {
+    display: inline;
+}
+
+.header-ul a {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 4px;
+    margin: 0 6px;
+    border-bottom: 4px solid red;
+}
+
+.body-div .resim {
+    border: 1px solid black;
+}
+
+.body-div > div:nth-child(2) {
+    background-color: rgb(58, 139, 58);
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    font-weight: 500;
+}
+
+.body-div .videolar > div {
+    padding-left: 20px;
+
+}
+
+.body-div .videolar > div > div {
+    width: 90%;
+}
+
+.body-div .videolar > div > div > div {
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 200px;
+}
+
+.kayitol {
+    border: 1px solid black;
+}
+
+.kayitinput > div:nth-child(1) {
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.kayitinput input[type="text"], .kayitinput input[type="password"] {
+    border: 2px solid rgb(112, 112, 112);
+    border-left: none;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+    padding-left:8px;
+}
+
+.kayitsubmit {
+    padding: 2px 20px !important;
+}
