@@ -1,23 +1,43 @@
 <?php require "views/header.php"; ?>
 
 <div class="body-div mt-2">
-    <div class="row resim">
-        <div class="col-12 text-center mt-2">
-            <p style="color:green; font-size: 36px; font-weight:500">Türkiye'de Bir İlk!</p>
-        </div>
-        <div class="col-12 text-center" style="background-color: #eee; height:190px">
-            <p style="font-size: 30px; font-weight:500; margin-top:70px">Resim</p>
-        </div>
-        <div class="col-12 text-center mt-2">
-            <p style="font-size: 22px; font-weight:500">Nakliye ve araç temin merkezi</p>
-        </div>
+    <!-- Slide start -->
+
+		<div class="slider ">
+		
+		<div id="carouselExampleControls" class="carousel slide" style="overflow:hidden" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<?php echo URL ?>/views/design/images/slide1.jpg" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="<?php echo URL ?>/views/design/images/slide2.jpg" class="d-block w-100" alt="...">
+    </div>
+	<div class="carousel-item">
+      <img src="<?php echo URL ?>/views/design/images/slide3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+		
+		</div>
+	
+
+	
+	<!-- Slide end -->
     <div class="row mt-4" style="align-items: center;">
-        <div class="col-12 text-center">Son Dakika Natemden Haber Kayan Haber</div>
+        <div class="col-12 text-center"><marquee>Son Dakika Natemden Haber Kayan Haber</marquee></div>
     </div>
     <hr style="height:10px; border-width:0; background-color: rgb(206, 65, 0); opacity:1;">
     <div class="row videolar">
-        <div class="col-3 text-center">
+        <div class="col-6  col-md-3 text-center">
             <div>
                 <p style="font-weight: 500;">Nakliyeci Üye Anlatım Videosu</p> 
                 <div>
@@ -25,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-6  col-md-3 text-center">
             <div>
                 <p style="font-weight: 500;">Komisyoncu Üye Anlatım Videosu</p> 
                 <div>
@@ -33,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-6  col-md-3 text-center">
             <div>
                 <p style="font-weight: 500;">Şoför Anlatım Videosu</p> 
                 <div>
@@ -41,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-6 col-md-3 text-center">
             <div>
                 <p style="font-weight: 500;">Natem Genel Anlatım Videosu</p> 
                 <div> 
@@ -53,5 +73,4 @@
 
 </div>
 </div>
-
 <?php require "views/footer.php"; ?>

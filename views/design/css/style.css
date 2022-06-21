@@ -21,7 +21,7 @@ div {
  }
  
 .header {
-    height: 150px;
+    min-height: 150px;
     border: 1px solid black;
     border-radius: 12px;
 }
@@ -34,6 +34,7 @@ div {
 
 .header > div:nth-child(2) > div:nth-child(1) {
     border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
     background-color: rgb(184, 227, 255);
 }
 
@@ -41,7 +42,17 @@ div {
     border-bottom-right-radius: 12px;
     background-color: rgb(226, 211, 211);
 }
-
+.header .bolum{
+	min-height:75px;
+}
+.mdlogo{
+	border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.smlogo{
+	min-height:75px;
+    border-top-left-radius: 12px;
+}
 .header .uyegiris {
     background-color: rgb(206, 65, 0);
     color: white;
@@ -49,7 +60,9 @@ div {
     border-radius: 4px;
     padding: 4px 10px;
 }
-
+.telno{
+	font-size:18px;
+}
 .header-ul {
     display: flex;
     justify-content: space-around;
@@ -61,10 +74,10 @@ div {
 
 .header-ul a {
     color: black;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 500;
     text-decoration: none;
-    padding-bottom: 4px;
+    /*padding-bottom: 4px;*/
     margin: 0 6px;
     border-bottom: 4px solid red;
 }
@@ -119,3 +132,60 @@ div {
 .kayitsubmit {
     padding: 2px 20px !important;
 }
+
+
+/* Slide start */
+.slider .carousel{
+	max-height:400px;
+}
+.slider .carousel .carousel-item img{
+	height:400px;
+}
+
+/* Slide end */
+
+/* Responsive ayar start */
+
+@media (min-width: 576px) { 
+/* Col */
+	.header-ul a {
+		font-size:11px;
+		 margin: 0 3px;
+	}
+	.telno{
+		font-size:12px;
+	}
+	
+	
+ }
+@media (min-width: 768px) { 
+/* sm */
+	.header-ul a {
+		font-size:14px;
+		 margin: 0 3px;
+	}
+	.telno{
+		font-size:15px;
+	}
+ }
+
+@media (min-width: 992px) { 
+/* md */
+	.header-ul a {
+		font-size:17px;
+		 margin: 0 3px;
+	}
+	.telno{
+		font-size:18px;
+	}
+ }
+@media (min-width: 1200px) { 
+/* md */
+	.header-ul a {
+		font-size:18px;
+		 margin: 0 6px;
+	}
+ }
+
+
+/* Responsive ayar end */
