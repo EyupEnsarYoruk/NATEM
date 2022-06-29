@@ -81,7 +81,10 @@ div {
     margin: 0 6px;
     border-bottom: 4px solid red;
 }
-
+.input-border{
+	border: 2px solid black!important;
+    
+}
 .body-div .resim {
     border: 1px solid black;
 }
