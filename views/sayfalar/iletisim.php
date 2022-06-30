@@ -44,7 +44,7 @@
 				<h4>Telefon Numarası</h4>
 				<div style="flex-wrap:inherit" class="input-group text-center">
 					<span class="input-group-text">05</span>
-					<input type="text" required name="telefon" class="phone form-control pl-1" placeholder="Başında 05 olmadan">
+					<input type="text" required name="telefon"  class="phone form-control pl-1" placeholder="Başında 05 olmadan">
 				</div>
 			</div> 
 				<div class="col-md-8 col-12 mt-2">

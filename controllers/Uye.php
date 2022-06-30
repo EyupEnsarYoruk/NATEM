@@ -36,8 +36,10 @@
 
             $telefon = $this->Form->get("telefon")->bosmu();
 
-            $plaka = $this->Form->get("plaka")->bosmu();
-
+            $plaka1 = $this->Form->get("plaka")->bosmu();
+            $plaka2 = $this->Form->get("plaka2")->bosmu();
+            $plaka3 = $this->Form->get("plaka3")->bosmu();
+			
             $sifre = $this->Form->get("sifre")->bosmu();
 
             $sifretekrar = $this->Form->get("sifretekrar")->bosmu();
@@ -47,7 +49,7 @@
                 $this->View->goster("sayfalar/uyeol", array('hata' => $this->Form->error));
             
             else:
-
+				
                 $sifre = $this->Form->sifreKarsilastir($sifre, $sifretekrar);
 
                 if (!empty($this->Form->error)) :
@@ -55,7 +57,8 @@
                     $this->View->goster("sayfalar/uyeol", array('hata' => $this->Form->error));
                 
                 else:
-
+					$plaka=$plaka1.' '.strtoupper($plaka2).' '.$plaka3;
+					$telefon ='05'.$telefon;
                     $sonuc = $this->model->ekle("nakliyeci", array('telefon', 'plaka', 'sifre'), array($telefon, $plaka, $sifre));
 
                     if($sonuc==1):
@@ -199,6 +202,7 @@
             $this->View->goster("sayfalar/komisyoncuform");
 
         }
+		
 
     }
 

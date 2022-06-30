@@ -53,6 +53,7 @@ div {
 	min-height:75px;
     border-top-left-radius: 12px;
 }
+
 .header .uyegiris {
     background-color: rgb(206, 65, 0);
     color: white;
@@ -135,7 +136,30 @@ div {
 .kayitsubmit {
     padding: 2px 20px !important;
 }
+/* Diğer Sayfası */
+.col-1-5 {
+    flex: 0 0 12.3%;
+    max-width: 12.3%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.diger a{
+	font-weight:900;
+	height:70px;
+	align-items:center;
+}
 
+/* Ekstra Sayfası */
+.ekstralar table{
+	background-color:#c7ecee;
+}
+.ekstralar table th{
+	font-weight:500;
+}.ekstralar table td{
+	font-weight:900;
+}
 
 /* Slide start */
 .slider .carousel{

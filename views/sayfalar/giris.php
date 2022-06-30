@@ -39,13 +39,29 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
                     <form action="<?php echo URL ?>/Uye/nakliyeciGirisKontrol" method="post">
                         <h5 class="mt-1">Nakliyeci</h5>
                         <p>Giriş Formu</p>
-                        <div class="row mb-3 kayitinput">
+                        <!--<div class="row mb-3 kayitinput">
                             <div class="col-4">Plaka</div>
-                            <div class="col-8"><input type="text" name="plaka" value="<?php echo isset($_POST["plaka"]) ? $_POST["plaka"] : ""; ?>"></div>
+                            <div class="col-8"><input type="text" oninput="this.value = this.value.toUpperCase(), this.setCustomValidity('')" placeholder="34A3570"  pattern="^(0[1-9]|[1-7][0-9]|8[01])((\s?[a-zA-Z]\s?)(\d{4,5})|(\s?[a-zA-Z]{2}\s?)(\d{3,4})|(\s?[a-zA-Z]{3}\s?)(\d{2,3}))$"   required   name="plaka" value="<?php echo isset($_POST["plaka"]) ? $_POST["plaka"] : ""; ?>"></div>
+                        </div>-->
+						<div class="row mb-3 kayitinput">
+                            <div class="col-4">Plaka</div>
+                            <div class="col-8">
+								<div class="row">
+									<div class="col-4">
+										<input type="number" min="1" max="81" onchange="if(this.value.length<2 )this.value='0'+this.value;if(this.value==0) this.value='';" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" style="max-width:50px;" class="input-border"  maxlength="2"     required   name="plaka" >
+									</div>
+									<div class="col-4  ">
+										<input type="text" class="text-uppercase input-border"   maxlength="3" onkeydown="return /[a-z]/i.test(event.key);"     required   name="plaka2">
+									</div>
+									<div class="col-4">
+										<input style="max-width:60px;" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" class="input-border"   maxlength="4"    required   name="plaka3" >
+									</div>
+								</div>
+						</div>
                         </div>
                         <div class="row mb-3 kayitinput">
                             <div class="col-4">Şifre</div>
-                            <div class="col-8"><input type="password" name="sifre" value="<?php echo isset($_POST["sifre"]) ? $_POST["sifre"] : ""; ?>"></div>
+                            <div class="col-8"><input type="password" required name="sifre" value="<?php echo isset($_POST["sifre"]) ? $_POST["sifre"] : ""; ?>"></div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12 text-center">
@@ -70,11 +86,16 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
                         <p>Giriş Formu</p>
                         <div class="row mb-3 kayitinput">
                             <div class="col-4">Telefon</div>
-                            <div class="col-8"><input type="text" class="phone" name="telefon" value="<?php echo isset($_POST["telefon"]) ? $_POST["telefon"] : ""; ?>"></div>
+                            <div class="col-8">
+								<div style="flex-wrap:inherit" class="input-group">
+								  <span class="input-group-text">05</span>
+								  <input type="text" name="telefon" class="form-control phone" placeholder="Başında 05 olmadan">
+								</div>
+							</div>
                         </div>
                         <div class="row mb-3 kayitinput">
                             <div class="col-4">Şifre</div>
-                            <div class="col-8"><input type="password" name="sifre" value="<?php echo isset($_POST["sifre"]) ? $_POST["sifre"] : ""; ?>"></div>
+                            <div class="col-8"><input type="password" required name="sifre" value="<?php echo isset($_POST["sifre"]) ? $_POST["sifre"] : ""; ?>"></div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-12 text-center">
@@ -98,13 +119,9 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.phone').usPhoneFormat({
-            format: '(xxx) xxx-xxxx',
-        });   
-    });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+
+
 <?php
     else:
         header("Location: ".URL);
