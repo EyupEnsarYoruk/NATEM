@@ -42,11 +42,28 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
                         <p>Kayıt Formu</p>
                         <div class="row mb-3 kayitinput">
                             <div class="col-6">Telefon Numaranızı Giriniz</div>
-                            <div class="col-6"><input type="text" class="phone" tabindex="2" name="telefon" value="<?php echo isset($_POST["telefon"]) ? $_POST["telefon"] : ""; ?>"></div>
+                            <div class="col-6">
+								<div style="flex-wrap:inherit" class="input-group">
+									<span class="input-group-text">05</span>
+									<input type="text" name="telefon" class="form-control phone" placeholder=" Telefon numarası">
+								</div>
+							</div>
                         </div>
                         <div class="row mb-3 kayitinput">
                             <div class="col-6">Plakanızı Giriniz</div>
-                            <div class="col-6"><input type="text" name="plaka" value="<?php echo isset($_POST["plaka"]) ? $_POST["plaka"] : ""; ?>"></div>
+                            <div class="col-6">
+								<div class="row">
+									<div class="col-4">
+										<input type="number" value="<?php echo isset($_POST["plaka"]) ? $_POST["plaka"] : ""; ?>" onchange="if(this.value.length<2)this.value='0'+this.value;if(this.value==0) this.value='';" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" style="max-width:50px;" class="input-border"  maxlength="2" max="81"     required   name="plaka" >
+									</div>
+									<div class="col-4  ">
+										<input type="text" value="<?php echo isset($_POST["plaka2"]) ? $_POST["plaka2"] : ""; ?>" class="text-uppercase input-border"   maxlength="3" onkeydown="return /[a-z]/i.test(event.key);"     required   name="plaka2">
+									</div>
+									<div class="col-4">
+										<input style="max-width:60px;" value="<?php echo isset($_POST["plaka3"]) ? $_POST["plaka3"] : ""; ?>" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" class="input-border"   maxlength="4"    required   name="plaka3" >
+									</div>
+								</div>
+							</div>
                         </div>
                         <div class="row mb-3 kayitinput">
                             <div class="col-6">Şifrenizi Giriniz</div>
@@ -71,8 +88,13 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
                         <h5 class="mt-2">Komisyoncu</h5>
                         <p>Kayıt Formu</p>
                         <div class="row mb-3 kayitinput">
-                            <div class="col-6">Telefon Numaranızı Giriniz</div>
-                            <div class="col-6"><input type="text" class="phone" name="telefon" value="<?php echo isset($_POST["telefon"]) ? $_POST["telefon"] : ""; ?>"></div>
+                            <div class="col-6">Telefon Numaranız</div>
+                            <div class="col-6">
+								<div style="flex-wrap:inherit" class="input-group">
+									  <span class="input-group-text">05</span>
+									  <input type="text" name="telefon" class="form-control phone" placeholder=" Telefon numarası" value="<?php echo isset($_POST["phone"]) ? $_POST["phone"] : ""; ?>">
+								</div>
+							</div>
                         </div>
                         <div class="row mb-3 kayitinput">
                             <div class="col-6">Firma İsmi Belirleyiniz</div>
@@ -103,10 +125,16 @@ Session::oturumKontrol("komisyoncu", "where telefon='".Session::get("komisyoncut
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.phone').usPhoneFormat({
-            format: '(xxx) xxx-xxxx',
-        });   
+        $('.phone').mask('00 000 00 00');		
     });
+	$("input[name='plaka2']").on("change",function(){
+		
+		if($(this).val().length>2){
+			$("input[name='plaka3']").attr("maxlength",'3');
+		}else{
+			$("input[name='plaka3']").attr("maxlength",'4');
+		}
+	});
 </script>
 <?php
     else:
