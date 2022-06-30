@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL ?>/views/design/css/style.css">
-    <script src="https://unpkg.com/jquery-input-mask-phone-number@1.0.14/dist/jquery-input-mask-phone-number.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js" type="text/javascript"></script>
 </head>
 <body class="d-flex flex-column">
     <div class="container-fluid d-flex flex-column" style="flex: 1 0 auto;">
@@ -72,15 +72,15 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav d-none d-sm-block  header-ul">
 							    <li class="nav-item"><a href="<?php echo URL ?>/">Anasayfa</a></li>
-							  <li class="nav-item"><a href="#">Kuruluş</a></li>
-							  <li class="nav-item"><a href="#">Ölçüler</a></li>
-							  <li class="nav-item"><a href="#">Vukuat Bildir</a></li>
-							  <li class="nav-item"><a href="#">Ekstralar</a></li>
-							  <li class="nav-item"><a href="#">Araç Bildir</a></li>
-							  <li class="nav-item"><a href="#">Sıra Öğren</a></li>
-							  <li class="nav-item"><a href="#">Fiyatlar</a></li>
-							  <li class="nav-item"><a href="#">İletişim</a></li>
-							  <li class="nav-item"><a href="#">Diğer</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/kurulus">Kuruluş</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/olculer">Ölçüler</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/vukuat">Vukuat Bildir</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/ekstralar">Ekstralar</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/aracbildir">Araç Bildir</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/sira-ogren">Sıra Öğren</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/fiyatlar">Fiyatlar</a></li>
+							  <li class="nav-item"><a href="<?php echo URL ?>/iletisim/form">İletişim</a></li>
+							  <li class="nav-item"><a href="<?=URL ?>/diger">Diğer</a></li>
 						</ul>
 						<ul class="navbar-nav header-ul  d-block d-sm-none mobile-collapse">
 							<div class="container">
